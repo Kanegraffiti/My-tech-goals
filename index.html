@@ -26,6 +26,9 @@
 
         /* Page 3 */
         #page3 { display: flex; justify-content: space-around; padding: 30px; }
+        @media (max-width: 768px) {
+        #page3 { justify-content: space-between; flex-wrap: wrap; }}
+
         .page3-section { width: 100%; background-color: #fff; padding: 30px; text-align: center; }
         .page3-section h3 { font-size: 1.5rem; margin-bottom: 15px; }
       .page3-section p { line-height: 1.6; }
@@ -64,7 +67,7 @@
     <div id="container">
         <div id="page1">
             <h1 data-testid="slackDisplayName">Kanegraffiti</h1>
-            <img id="profileImage" data-testid="slackProfilePicture" src="your-profile-picture.jpg" alt="My Slack Profile Picture" width="150" height="150">
+            <img id="profileImage" data-testid="slackProfilePicture" src="https://github.com/Kanegraffiti/my-tech-goals/blob/main/slackprofilepicture.jpg" alt="My Slack Profile Picture" width="150" height="150">
             <p>I am Kelechi, an outgoing, passionate, and versatile creative who believes that creating a meaningful user experience can make a lot of difference for brands and their products</p>
             <div id="timeInfo">
                 <p data-testid="currentTimeUTC">Current Time in UTC: <span id="utcTime"></span></p>
