@@ -61,12 +61,9 @@
         #page2 h2,
         #page8 h2,
         #page10 h2 { color: white;}
-        /* Styling for the date/time container */
-        #timeInfo { margin-top: 30px; font-size: 0.9rem; color: #555; position: fixed; top: 40px;          
-        left: 40px; background-color: lightgray; padding: 8px; border-radius: 5px; font-family: monospace; }
-
-        #utcTime, #currentDay {
-            margin: 2px 0; }
+        #dateTimeContainer { position: fixed; top: 0; left: 0; width: 100%; background-color: #00906d; color: white; padding: 10px 20px; text-align: center; font-family: monospace;
+            font-size: 14px; }
+        #container { padding-top: 50px; }
     </style>
 </head>
 <body>
@@ -75,10 +72,13 @@
             <h1 data-testid="slackDisplayName">Kanegraffiti</h1>
             <img id="profileImage" data-testid="slackProfilePicture" src="https://github.com/Kanegraffiti/my-tech-goals/raw/main/slackprofilepicture.jpg" alt="My Slack Profile Picture" width="150" height="150">
             <p>I am Kelechi, an outgoing, passionate, and versatile creative who believes that crafting a meaningful user experience can make a lot of difference for brands and their products</p>
-            <div id="timeInfo">
-                <p data-testid="currentTimeUTC">Current Time in UTC: <span id="utcTime"></span></p>
-                <p data-testid="currentDay">Current Day: <span id="currentDay"></span></p>
-            </div>
+            <div id="dateTimeContainer">
+            <p data-testid="currentTimeUTC">
+        <span id="utcTime"></span>, <span data-testid="currentDay" id="currentDay"></span>, <span id="utcDate"></span>
+            </p>
+        </div> 
+
+    <div id="container">
         </div>
 
         <div id="page2">
@@ -154,16 +154,19 @@
 
 <script>
     // JavaScript to get current UTC time and day 
-    const utcTimeElement = document.getElementById('utcTime');
-    const currentDayElement = document.getElementById('currentDay');
+        const utcTimeElement = document.getElementById('utcTime');
+        const currentDayElement = document.getElementById('currentDay');
+        const utcDateElement = document.getElementById('utcDate');
 
-    function updateDateTime() {
-        const now = new Date();
-        utcTimeElement.textContent = now.toISOString().slice(0, 19).replace('T', ' ');
-        currentDayElement.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
-    }
-    updateDateTime();
-    setInterval(updateDateTime, 1000); // Update every second
+        function updateDateTime() {
+            const now = new Date();
+            utcTimeElement.textContent = now.toISOString().slice(11, 19); // Just the time (HH:mm:ss)
+            currentDayElement.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+            utcDateElement.textContent = now.toISOString().slice(0, 10).split('-').reverse().join('-'); // Format: DD-MM-YYYY
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000); // Update every second
 </script>
 </body>
 </html>
