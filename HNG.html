@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Two-Year Tech Goals</title>
+    <style>
+        /* CSS Styling */
+        body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+        #container { max-width: 960px; margin: 0 auto; padding: 20px; }
+        h1, h2, h3 { color: #222; font-weight: bold; } /* To make my headings bold */
+        img { max-width: 100%; height: auto; } /* To ensure images scale responsively */
+        a { color: #333; text-decoration: none; } /* Style links */
+
+        /* Page 1 */
+        #page1 { background-color: #fff; padding: 40px; text-align: center; }
+        #page1 h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        #profileImage { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 20px auto; }
+        #page1 p { font-size: 1.2rem; line-height: 1.6; }
+        #timeInfo { margin-top: 30px; font-size: 0.9rem; color: #555; }
+
+        /* Page 2 (Blue Background) */
+        #page2 { background-color: #2d9cdb; color: #fff; padding: 80px 40px; text-align: center; }
+        #page2 h2 { font-size: 2rem; margin-bottom: 20px; }
+        #page2 p { font-size: 1.1rem; line-height: 1.6; }
+
+        /* Page 3 */
+        #page3 { display: flex; justify-content: space-around; padding: 30px; }
+        .page3-section { width: 100%; background-color: #fff; padding: 30px; text-align: center; }
+        .page3-section h3 { font-size: 1.5rem; margin-bottom: 15px; }
+      .page3-section p { line-height: 1.6; }
+
+        /* Page 4 */
+        #page4 { background-color: #f4f4f4; padding: 40px; text-align: center; }
+        #page4 h2 { font-size: 2rem; margin-bottom: 20px; }
+
+        /* Page 5, 6, 7 (Project Sections) */
+        .project { background-color: #fff; margin-bottom: 30px; padding: 30px; }
+        .project img { margin-bottom: 20px; width: 100%; height: auto; }
+        .project h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .project p { line-height: 1.6; }
+
+        /* Page 8 (Orange Background) */
+        #page8 { background-color: #ffa500; color: #fff; padding: 80px 40px; text-align: center; }
+        #page8 h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        #page8 p { font-size: 1.1rem; line-height: 1.6; }
+
+        /* Page 9 */
+        #page9 { background-color: #fff; padding: 40px; text-align: center; }
+        #page9 ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; }
+
+        /* Page 10 (Green Background) */
+        #page10 { background-color: #27ae60; color: #fff; padding: 80px 40px; text-align: center; }
+        #page10 h2 { font-size: 2rem; margin-bottom: 20px; }
+        #page10 p { font-size: 1.1rem; line-height: 1.6; }
+        #page10 a { color: #fff; text-decoration: underline; } /* White links on green background */
+        #page2 h2,
+        #page8 h2,
+        #page10 h2 { color: white;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="page1">
+            <h1 data-testid="slackDisplayName">Kanegraffiti</h1>
+            <img id="profileImage" data-testid="slackProfilePicture" src="your-profile-picture.jpg" alt="My Slack Profile Picture" width="150" height="150">
+            <p>I am Kelechi, an outgoing, passionate, and versatile creative who believes that creating a meaningful user experience can make a lot of difference for brands and their products</p>
+            <div id="timeInfo">
+                <p data-testid="currentTimeUTC">Current Time in UTC: <span id="utcTime"></span></p>
+                <p data-testid="currentDay">Current Day: <span id="currentDay"></span></p>
+            </div>
+        </div>
+
+        <div id="page2">
+            <h2>About Me</h2>
+            <p>What sets my work apart from other design studios? Describe it here.</p>
+        </div>
+
+        <div id="page3">
+            <div class="page3-section">
+                <h3>Client First Approach</h3>
+                <p>What sets your work apart from other design studios? Describe it here.</p>
+            </div>
+            <div class="page3-section">
+                <h3>Attention to Given Details</h3>
+                <p>What sets your work apart from other design studios? Describe it here.</p>
+            </div>
+        </div>
+
+        <div id="page4">
+            <h2>My Work</h2>
+      </div>
+
+        <div class="project">
+            <img src="project1-image.jpg" alt="Project 1" width="800" height="400"> 
+            <h3>Logo</h3>
+            <p>Give a brief overview of your project here. You may talk about the client brand and the main project challenge. The Concept Talk about your idea here. Expound on how you approached the challenge and how your work helped your client.</p>
+        </div>
+
+        <div class="project">
+            <img src="project2-image.jpg" alt="Project 2" width="800" height="400">
+            <h3>Print Design</h3>
+            <p>Give a brief overview of your project here. You may talk about the client brand and the main project challenge. The Concept Talk about your idea here. Expound on how you approached the challenge and how your work helped your client.</p>
+        </div>
+
+        <div class="project">
+            <img src="project3-image.jpg" alt="Project 3" width="800" height="400">
+            <h3>Social Media</h3>
+            <p>Give a brief overview of your project here. You may talk about the client brand and the main project challenge. The Concept Talk about your idea here. Expound on how you approached the challenge and how your work helped your client.</p>
+        </div>
+
+        <div id="page4">
+            <h2>My Tech Goals</h2>
+        </div>
+      
+      <div id="page8">
+            <h2>My 2 Year Plan</h2>
+            <p>Discover how your brand can make a bigger impact with our strong community of creatives, engineers, and leaders.</p>
+        </div>
+
+        <div id="page9">
+            <h2>Explore your brand's possibilities</h2>
+            <ul>
+                <li>Brand Strategy</li>
+                <li>Brand Identity</li>
+                <li>Print Design</li>
+                <li>Video Production</li>
+                <li>Web Design</li>
+                <li>Social Media</li>
+            </ul>
+        </div>
+
+        <div id="page10">
+            <h2>Let's collaborate!</h2>
+<p>hello@reallygreatsite.com<br>(123) 456-7890<br>Anywhere St. Any City ST 12345</p>
+<p data-testid="slackEmail">Your Slack Email</p>
+<ul>
+<li><a href="https://hng.tech/learn" data-testid="hngLink">HNG Tech</a></li>
+<li><a href="https://keyword.dog" data-testid="keywordLink">Keyword.dog</a></li>
+<li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">ScrapeAnyWeb</a></li>
+</ul>
+</div>
+</div>
+
+<script>
+    // JavaScript to get current UTC time and day (you can add this to Blogger's template or in a separate .js file)
+    const utcTimeElement = document.getElementById('utcTime');
+    const currentDayElement = document.getElementById('currentDay');
+
+    function updateDateTime() {
+        const now = new Date();
+        utcTimeElement.textContent = now.toISOString().slice(0, 19).replace('T', ' ');
+        currentDayElement.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000); // Update every second
+</script>
+</body>
+</html>
