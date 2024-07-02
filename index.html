@@ -10,7 +10,9 @@
         #container { max-width: 960px; margin: 0 auto; padding: 20px; }
         h1, h2, h3 { color: #222; font-weight: bold; } /* To make my headings bold */
         img { max-width: 100%; height: auto; } /* To ensure images scale responsively */
-        a { color: #333; text-decoration: none; } /* Style links */
+        a { color: #333; text-decoration: none; } /* Styles my links */
+
+        .light-link { color: lightgray; text-decoration: underline; }
 
         /* Page 1 */
         #page1 { background-color: #fff; padding: 40px; text-align: center; }
@@ -31,7 +33,7 @@
 
         .page3-section { width: 100%; background-color: #fff; padding: 30px; text-align: center; }
         .page3-section h3 { font-size: 1.5rem; margin-bottom: 15px; }
-      .page3-section p { line-height: 1.6; }
+        .page3-section p { line-height: 1.6; }
 
         /* Page 4 */
         #page4 { background-color: #cbd1d3; padding: 40px; text-align: center; }
@@ -52,15 +54,23 @@
         #page9 { background-color: #fff; padding: 40px; text-align: center; }
         #page9 ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
         #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; }
+        #page9 { background-color: #fff; padding: 40px; text-align: center; }
+        #page9 ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; transition: background-color 0.3s ease; }
+        #page9 li:hover { background-color: #d0d0d0; cursor: pointer; }
 
         /* Page 10 */
         #page10 { background-color: #5e17eb; color: #fff; padding: 80px 40px; text-align: center; }
         #page10 h2 { font-size: 2rem; margin-bottom: 20px; }
         #page10 p { font-size: 1.1rem; line-height: 1.6; }
         #page10 a { color: #fff; text-decoration: underline; } /* White links on coloured background */
+
+        /* I made white headings for coloured backgrounds here */
         #page2 h2,
         #page8 h2,
         #page10 h2 { color: white;}
+        
+        /* Date and time */
         #dateTimeContainer { position: fixed; top: 0; left: 0; width: 100%; background-color: #00906d; color: white; padding: 5px 20px; text-align: center; font-family: monospace;
             font-size: 12px; }
         #container { padding-top: 50px; }
@@ -85,27 +95,27 @@
 
         <div id="page2">
             <h2>About Me</h2>
-            <p>My work stands out because there's a blend of my creative background and my growing technical expertise. With a foundation in graphic design, I bring an eye for visual aesthetics, user experience, and intuitive interfaces to my projects.</p>
+            <p>My work stands out because there's a blend of my creative background and my growing technical expertise. With a foundation in graphic designs on Canva, I bring an eye for visual aesthetics, user experience, and intuitive interfaces to my projects.</p>
         </div>
 
         <div id="page3">
             <div class="page3-section">
                 <h3>Client First Approach</h3>
-                <p>What sets your work apart from other design studios? Describe it here.</p>
+                <p>I prioritize open communication, active listening, and a collaborative approach to ensure that design decisions align with your goals.</p>
             </div>
             <div class="page3-section">
                 <h3>Attention to Given Details</h3>
-                <p>What sets your work apart from other design studios? Describe it here.</p>
+                <p>I review and update my results to ensure a polished final product that aligns with your vision and functions efficiently.</p>
             </div>
         </div>
 
         <div id="page4">
-            <h2>My Work</h2>
+            <h2>Current Skill Set</h2>
       </div>
 
         <div class="project">
             <img src="project1-image.jpg" alt="Project 1" width="800" height="400"> 
-            <h3>Logo</h3>
+            <h3>Logo Design</h3>
             <p>Give a brief overview of your project here. You may talk about the client brand and the main project challenge. The Concept Talk about your idea here. Expound on how you approached the challenge and how your work helped your client.</p>
         </div>
 
@@ -117,7 +127,7 @@
 
         <div class="project">
             <img src="project3-image.jpg" alt="Project 3" width="800" height="400">
-            <h3>Social Media</h3>
+            <h3>Social Media Posts</h3>
             <p>Give a brief overview of your project here. You may talk about the client brand and the main project challenge. The Concept Talk about your idea here. Expound on how you approached the challenge and how your work helped your client.</p>
         </div>
 
@@ -126,31 +136,35 @@
         </div>
       
       <div id="page8">
-            <h2>My 2 Year Plan</h2>
-            <p>Discover how your brand can make a bigger impact with our strong community of creatives, engineers, and leaders.</p>
+            <h2>A 2-Year Plan Overview</h2>
+            <p>My two-year plan is to evolve from a <a href="https://www.canva.com/" class="light-link" target="_blank">Canva</a> designer with limited front-end skills to a full-stack developer. I'm tackling the entire <a href="https://www.freecodecamp.org/" class="light-link" target="_blank">FreeCodeCamp</a> curriculum bit by bit starting from the top and will continuously seek new challenges to broaden my knowledge and build a versatile skill set for open source projects.</p>
         </div>
 
         <div id="page9">
-            <h2>Explore your brand's possibilities</h2>
+            <h2>Skill Set in View</h2>
             <ul>
-                <li>Brand Strategy</li>
-                <li>Brand Identity</li>
-                <li>Print Design</li>
-                <li>Video Production</li>
-                <li>Web Design</li>
-                <li>Social Media</li>
+                <li>Responsive Web Design</li>
+                <li>JS Algorithms an Data Structures</li>
+                <li>Front End Libraries</li>
+                <li>Data Visualization</li>
+                <li>Relational Database</li>
+                <li>Back End Development</li>
             </ul>
         </div>
 
         <div id="page10">
-            <h2>Let's collaborate!</h2>
-<p>talesfromterminals.blogspot.com<br>(+234) 367-456-7890<br>Ibadan, Oyo State, Nigeria</p>
-<p data-testid="slackEmail">kelechiann.nwankwo@gmail.com</p>
-<ul>
-<li><a href="https://hng.tech/learn" data-testid="hngLink">HNG Tech</a></li>
-<li><a href="https://keyword.dog" data-testid="keywordLink">Keyword.dog</a></li>
-<li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">ScrapeAnyWeb</a></li>
-</ul>
+    <h2>Let's collaborate!</h2>
+    <p>
+        <a href="https://talesfromterminals.blogspot.com/" class="light-link" target="_blank">talesfromterminals.blogspot.com</a><br>
+        <a href="https://anopensourcediary.blogspot.com/" class="light-link" target="_blank">anopensourcediary.blogspot.com</a><br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Ibadan,+Oyo+State,+Nigeria" class="light-link" target="_blank">Ibadan, Oyo State, Nigeria</a>
+    </p>
+    <p data-testid="slackEmail">kelechiann.nwankwo@gmail.com</p>
+    <ul>
+        <li><a href="https://hng.tech/learn" data-testid="hngLink">HNG Tech</a></li>
+        <li><a href="https://keyword.dog" data-testid="keywordLink">Keyword.dog</a></li>
+        <li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">ScrapeAnyWeb</a></li>
+    </ul>
 </div>
 </div>
 
