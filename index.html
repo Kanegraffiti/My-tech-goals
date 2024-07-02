@@ -13,14 +13,18 @@
         a { color: #333; text-decoration: none; } /* Styles my links */
 
         .light-link { color: lightgray; text-decoration: underline; }
-
+         
+         /* Date and time */
+        #dateTimeContainer { position: fixed; top: 0; left: 0; width: 100%; background-color: #00906d; color: white; padding: 5px 20px; text-align: center; font-family: monospace; font-size: 12px; z-index: 10; }
+        #container { padding-top: 50px; }
+        
         /* Page 1 */
         #page1 { background-color: #fff; padding: 40px; text-align: center; }
         #page1 h1 { font-size: 2.5rem; margin-bottom: 10px; }
         #profileImage { width: 150px; height: 150px; border-radius: 0%; object-fit: cover; margin: 20px auto; }
         #page1 p { font-size: 1.2rem; line-height: 1.6; }
         #timeInfo { margin-top: 30px; font-size: 0.9rem; color: #555; }
-
+        
         /* Page 2 */
         #page2 { background-color: #00906d; color: #fff; padding: 80px 40px; text-align: center; }
         #page2 h2 { font-size: 2rem; margin-bottom: 20px; }
@@ -53,11 +57,12 @@
         /* Page 9 */
         #page9 { background-color: #fff; padding: 40px; text-align: center; }
         #page9 ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; }
-        #page9 { background-color: #fff; padding: 40px; text-align: center; }
-        #page9 ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; transition: background-color 0.3s ease; }
+        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; transition: background-color 0.3s ease; position: relative; }
         #page9 li:hover { background-color: #d0d0d0; cursor: pointer; }
+
+        /* Tooltip Styles */
+        #page9 li .tooltip { visibility: hidden; background-color: #333; color: #fff; padding: 8px; border-radius: 6px; position: absolute; z-index: 1; bottom: 125%; left: 50%; transform: translateX(-50%); opacity: 0; transition: opacity 0.3s; }
+        #page9 li:hover .tooltip { visibility: visible; opacity: 1; }
 
         /* Page 10 */
         #page10 { background-color: #5e17eb; color: #fff; padding: 80px 40px; text-align: center; }
@@ -70,10 +75,6 @@
         #page8 h2,
         #page10 h2 { color: white;}
         
-        /* Date and time */
-        #dateTimeContainer { position: fixed; top: 0; left: 0; width: 100%; background-color: #00906d; color: white; padding: 5px 20px; text-align: center; font-family: monospace;
-            font-size: 12px; }
-        #container { padding-top: 50px; }
     </style>
 </head>
 <body>
@@ -143,12 +144,12 @@
         <div id="page9">
             <h2>Skill Set in View</h2>
             <ul>
-                <li>Responsive Web Design</li>
-                <li>JS Algorithms an Data Structures</li>
-                <li>Front End Libraries</li>
-                <li>Data Visualization</li>
-                <li>Relational Database</li>
-                <li>Back End Development</li>
+                  <li data-info="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Brand Strategy</li>
+                  <li data-info="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Brand Identity</li>
+                  <li data-info="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">Print Design</li>
+                  <li data-info="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">Video Production</li>
+                  <li data-info="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">Web Design</li>
+                  <li data-info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Social Media</li>
             </ul>
         </div>
 
@@ -170,19 +171,29 @@
 
 <script>
     // JavaScript to get current UTC time and day 
-        const utcTimeElement = document.getElementById('utcTime');
-        const currentDayElement = document.getElementById('currentDay');
-        const utcDateElement = document.getElementById('utcDate');
+const utcTimeElement = document.getElementById('utcTime');
+const currentDayElement = document.getElementById('currentDay');
+const utcDateElement = document.getElementById('utcDate');
 
-        function updateDateTime() {
-            const now = new Date();
-            utcTimeElement.textContent = now.toISOString().slice(11, 19); // Just the time (HH:mm:ss)
-            currentDayElement.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
-            utcDateElement.textContent = now.toISOString().slice(0, 10).split('-').reverse().join('-'); // Format: DD-MM-YYYY
-        }
+function updateDateTime() {
+    const now = new Date();
+    utcTimeElement.textContent = now.toISOString().slice(11, 19);
+    currentDayElement.textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+    utcDateElement.textContent = now.toISOString().slice(0, 10).split('-').reverse().join('-'); }
 
-        updateDateTime();
-        setInterval(updateDateTime, 1000); // Update every second
+updateDateTime();
+setInterval(updateDateTime, 1000); // Update every second
+
+// New code for tooltips
+const listItems = document.querySelectorAll("#page9 li");
+
+listItems.forEach(item => {
+    const tooltipText = item.getAttribute('data-info');
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.textContent = tooltipText;
+    item.appendChild(tooltip);
+});
 </script>
 </body>
 </html>
