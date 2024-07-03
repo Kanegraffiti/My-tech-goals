@@ -8,9 +8,9 @@
         /* CSS Styling */
         body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
         #container { max-width: 960px; margin: 0 auto; padding: 20px; }
-        h1, h2, h3 { color: #222; font-weight: bold; } /* To make my headings bold */
-        img { max-width: 100%; height: auto; } /* To ensure images scale responsively */
-        a { color: #3c2515; text-decoration: none; } /* Styles my links */
+        h1, h2, h3 { color: #222; font-weight: bold; } 
+        img { max-width: 100%; height: auto; }
+        a { color: #3c2515; text-decoration: none; } 
         .light-link { color: darkbrown; text-decoration: none; }
          
          /* Date and time */
@@ -33,7 +33,6 @@
         #page3 { display: flex; justify-content: space-around; padding: 30px; }
         @media (max-width: 768px) {
         #page3 { justify-content: space-between; flex-wrap: wrap; }}
-
         .page3-section { width: 100%; background-color: #fff; padding: 30px; text-align: center; }
         .page3-section h3 { font-size: 1.5rem; margin-bottom: 15px; }
         .page3-section p { line-height: 1.6; }
@@ -56,7 +55,7 @@
         /* Page 9 */
         #page9 { background-color: #fff; padding: 40px; text-align: center; }
         #page9 ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 150px; transition: background-color 0.3s ease; position: relative; }
+        #page9 li { background-color: #f0f0f0; padding: 20px; border-radius: 5px; width: 200px; transition: background-color 0.3s ease; position: relative; }
         #page9 li:hover { background-color: #d0d0d0; cursor: pointer; }
 
         /* Tooltip Styles */
@@ -67,7 +66,8 @@
         #page10 { background-color: #3c2515; color: #fff; padding: 80px 40px; text-align: center; }
         #page10 h2 { font-size: 2rem; margin-bottom: 20px; }
         #page10 p { font-size: 1.1rem; line-height: 1.6; }
-        #page10 a { color: #fff; text-decoration: underline; } /* White links on coloured background */
+        #page10 a { color: #fff; text-decoration: none; transition: color 0.3s ease; }
+        #page10 a:hover { color: #cbd1d3; }
 
         /* I made white headings for coloured backgrounds here */
         #page2 h2,
@@ -150,11 +150,11 @@
             <h2>Skill Set in View</h2>
             <ul>
                   <li data-info="Front End Development is basically about translating design visions into interactive interfaces, where aesthetics and functionality meet.">Front End Development</li>
-                  <li data-info="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Brand Identity</li>
-                  <li data-info="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">Print Design</li>
-                  <li data-info="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">Video Production</li>
-                  <li data-info="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">Web Design</li>
-                  <li data-info="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Social Media</li>
+                  <li data-info="The building blocks of efficient and organized code that power the logic and functionality of web applications.">JS Algorithms and Data Structures</li>
+                  <li data-info="Crafting websites that adapt seamlessly to different screen sizes and devices, ensuring a consistent and optimal user experience.">Responsive Web Design</li>
+                  <li data-info="Transforming raw data into visually compelling charts, graphs, and maps that reveal patterns, insights, and stories hidden within.">Data Visualization</li>
+                  <li data-info="A structured system for storing, organizing, and managing data relationships, enabling efficient retrieval and manipulation of information.">Relational Database</li>
+                  <li data-info="The behind-the-scenes engine that powers web applications, handling data processing, server-side logic, and API interactions.">Back End Development</li>
             </ul>
         </div>
 
