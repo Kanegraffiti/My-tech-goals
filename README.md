@@ -1,6 +1,6 @@
 **My Tech Goals Showcase**
 
-[https://kanegraffiti.github.io/my-tech-goals/]
+**Live preview:** https://kanegraffiti.github.io/my-tech-goals/
 
 Welcome to a showcase page designed to highlight my key tech objectives for the next two years. This project is a simple, responsive single-page site built as a foundation for a future, more elaborate portfolio.
 
